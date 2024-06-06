@@ -1,12 +1,35 @@
+import "./App.sass";
+import { Octokit } from "octokit";
 
-import './App.sass';
+const octokit = new Octokit({
+  auth: process.env.TOKEN,
+});
 
-function App() {
-  return (
-    <div className="App">
-     here will be content 
-    </div>
+try {
+  const result = await octokit.request('GET /search/igoris12', {
+  // owner: 'igoris12',
+  // repo: 'portfolio_website',
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
+  }
+  });
+
+  // result.data.map((issue) => {
+  //   console.log(issue.title, issue.user.id);
+  // });
+
+  
+    console.log(result.data);
+
+  
+  
+} catch (error) {
+  console.log(
+    `Error! Status: ${error.status}. Message: ${error.response.data.message}`
   );
+}
+function App() {
+  return <div className="App">here will be content</div>;
 }
 
 export default App;
