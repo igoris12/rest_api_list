@@ -2,13 +2,13 @@ import "./App.sass";
 import { Octokit } from "octokit";
 
 const octokit = new Octokit({
-  auth: process.env.TOKEN,
+  auth: secret ,
 });
 
 try {
-  const result = await octokit.request('GET /search/igoris12', {
-  // owner: 'igoris12',
-  // repo: 'portfolio_website',
+  const result = await octokit.request('GET /repos/{owner}/{repo}', {
+  owner: 'igoris12',
+  repo: 'portfolio_website',
   headers: {
     'X-GitHub-Api-Version': '2022-11-28'
   }
