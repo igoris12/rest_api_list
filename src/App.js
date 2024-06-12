@@ -6,9 +6,9 @@ const octokit = new Octokit({
 });
 
 try {
-  const result = await octokit.request("GET /repos/{owner}/{repo}", {
-    owner: "igoris12",
-    repo: "portfolio_website",
+  const result = await octokit.request("GET /repositories?q=	jquery in:name", {
+    // owner: "igoris12",
+    // repo: "portfolio_website",
     headers: {
       "X-GitHub-Api-Version": "2022-11-28",
     },
