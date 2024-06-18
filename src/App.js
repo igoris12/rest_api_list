@@ -1,29 +1,14 @@
 import "./App.sass";
-import { Octokit } from "octokit";
+import React, { useEffect, useState } from "react";
 
-const octokit = new Octokit({
-  auth: process.env.TOKEN
-});
+const App = () => {
+  const url = 'https://api.github.com/search/repositories?q=readme:pomodoro=stars&order=desc&per_page=10';
 
-try {
-  const result = await octokit.request("GET /repositories?q=	jquery in:name", {
-    // owner: "igoris12",
-    // repo: "portfolio_website",
-    headers: {
-      "X-GitHub-Api-Version": "2022-11-28",
-    },
-  });
-
- 
-  console.log(result.data);
-  console.log(result.data.name);
-  console.log(result.data.svn_url);
-} catch (error) {
-  console.log(
-    `Error! Status: ${error.status}. Message: ${error.response.data.message}`
-  );
-}
-function App() {
+  fetch(url)
+    .then(response => response.json())
+    .then(repos => {
+      console.log(repos);
+    });
   return <div className="App">here will be content</div>;
 }
 
