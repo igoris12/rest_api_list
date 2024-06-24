@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [data, setData] = useState([]);
   const url =
-    "https://api.github.com/search/repositories?q=stars:>=1&sort=stars&order=desc";
+    "https://api.github.com/search/repositories?q=readme:portfolio stars:>=1&sort=stars&order=desc";
 
   useEffect(() => {
     fetch(url)
