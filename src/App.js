@@ -1,5 +1,6 @@
-import "./App.sass";
+
 import React, { useEffect, useState } from "react";
+import RepositoriesList from "./components/RepositoriesList";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -21,16 +22,17 @@ const App = () => {
         console.error("Error:", error);
       });
   }, []);
-  console.log(data);
-  const nameList = data.map((project) => (
-    <li key={project.id}>
-      {project.name} {" "} <span>{project.stargazers_count}</span>
-    </li>
-  ));
+  // console.log(data);
+  // const nameList = data.map((project) => (
+  //   <li key={project.id}>
+  //     {project.name} {" "} <span>{project.stargazers_count}</span>
+  //   </li>
+  // ));
   return (
     <div className="App">
       <h1>Content</h1>
-      <ul>{nameList}</ul>
+      <h1>Content</h1>
+      <RepositoriesList data={data}/>
     </div>
   );
 };
