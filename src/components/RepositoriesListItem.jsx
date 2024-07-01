@@ -1,10 +1,11 @@
 import React from 'react'
 
-function RepositoriesListItem() {
+function RepositoriesListItem({repoData, rank}) {
+  console.log(repoData);
   return (
-    <div>
-      item
-    </div>
+    <li>
+      {repoData.id + " " + repoData.name + ' ' + rank}
+    </li>
   )
 }
 

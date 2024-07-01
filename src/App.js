@@ -31,7 +31,6 @@ const App = () => {
   return (
     <div className="App">
       <h1>Content</h1>
-      <h1>Content</h1>
       <RepositoriesList data={data}/>
     </div>
   );

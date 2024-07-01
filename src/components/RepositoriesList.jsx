@@ -4,7 +4,7 @@ import RepositoriesListItem from './RepositoriesListItem'
 function RepositoriesList({data}) {
   return (
     <div>
-      <RepositoriesListItem/>
+      <RepositoriesListItem repoData={data[0] } rank={data.indexOf(data[0]) + 1}/>
     </div>
   )
 }
