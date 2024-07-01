@@ -4,7 +4,7 @@ function RepositoriesListItem({repoData, rank}) {
   console.log(repoData);
   return (
     <li>
-      {repoData.id + " " + repoData.name + ' ' + rank}
+      { rank +  " " + repoData.name   } 
     </li>
   )
 }
