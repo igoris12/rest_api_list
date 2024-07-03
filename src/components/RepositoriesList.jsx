@@ -1,12 +1,29 @@
-import React from 'react'
-import RepositoriesListItem from './RepositoriesListItem'
+import React from "react";
+import RepositoriesListItem from "./RepositoriesListItem";
 
-function RepositoriesList({data}) {
+function RepositoriesList({ data }) {
   return (
-    <section className='RepositoriesList'>
-      <RepositoriesListItem repoData={data[0] } rank={data.indexOf(data[0]) + 1}/>
-    </section>
-  )
+    <ol className="RepositoriesList">
+      <div className="header">
+        <span>Rank</span>
+        <span>Name</span>
+        <span>Year</span>
+        <span>Stars</span>
+      </div>
+      <RepositoriesListItem
+        repoData={data[0]}
+        rank={data.indexOf(data[0]) + 1}
+      />
+      <RepositoriesListItem
+        repoData={data[0]}
+        rank={data.indexOf(data[0]) + 1}
+      />
+      <RepositoriesListItem
+        repoData={data[0]}
+        rank={data.indexOf(data[0]) + 1}
+      />
+    </ol>
+  );
 }
 
-export default RepositoriesList
+export default RepositoriesList;

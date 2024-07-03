@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import RepositoriesList from "./components/RepositoriesList";
 
@@ -30,7 +29,7 @@ const App = () => {
   // ));
   return (
     <div className="App">
-      <RepositoriesList data={data}/>
+      <RepositoriesList data={data} />
     </div>
   );
 };
