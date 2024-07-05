@@ -1,3 +1,24 @@
 .RepositoriesListItem {
-    background-color: red
+  background-color: $background-dark;
+  padding: 10px;
+  max-width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .rank {
+    width: 10%;
+  }
+  .title {
+    width: 40%;
+  }
+  .name {
+    width: 30%;
+  }
+  .year {
+    width: 10%;
+  }
+  .stars {
+    width: 10%;
+  }
 }

@@ -5,10 +5,12 @@ function RepositoriesList({ data }) {
   return (
     <ol className="RepositoriesList">
       <div className="header">
-        <span>Rank</span>
-        <span>Name</span>
-        <span>Year</span>
-        <span>Stars</span>
+        <span className="rank">Rank</span>
+        <span className="title">Title</span>
+
+        <span className="name">Name</span>
+        <span className="year">Year</span>
+        <span className="stars">Stars</span>
       </div>
       <RepositoriesListItem
         repoData={data[0]}
