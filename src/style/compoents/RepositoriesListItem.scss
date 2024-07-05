@@ -19,6 +19,12 @@
     width: 10%;
   }
   .stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     width: 10%;
+    svg {
+        color: orange;
+    }
   }
 }

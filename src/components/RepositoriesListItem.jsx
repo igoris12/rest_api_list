@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRegStar } from "react-icons/fa";
 
 function RepositoriesListItem({ repoData, rank }) {
   console.log(repoData);
@@ -8,7 +9,7 @@ function RepositoriesListItem({ repoData, rank }) {
       <span className="title">{repoData.name}</span>
       <span className="name">{repoData.owner.login}</span>
       <span className="year">{repoData.created_at.slice(0, 4)}</span>
-      <span className="stars">{repoData.stargazers_count}</span>
+      <span className="stars"><FaRegStar />{ repoData.stargazers_count}</span>
     </li>
   ) : (
     <li>lodding...</li>
