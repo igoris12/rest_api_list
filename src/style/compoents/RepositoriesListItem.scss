@@ -7,11 +7,13 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  flex-wrap: wrap;
   .rank {
     width: 10%;
   }
   .title {
     width: 40%;
+    word-break: break-word;
   }
   .name {
     width: 30%;
@@ -25,7 +27,47 @@
     gap: 5px;
     width: 10%;
     svg {
-        color: orange;
+      color: orange;
+    }
+  }
+   .info {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .RepositoriesList {
+    .name {
+      display: none;
+    }
+    .year {
+      display: none;
+    }
+    .stars {
+      width: 20%;
+      justify-content: right;
+    }
+    .rank {
+      width: 20%;
+    }
+    .title {
+      width: 60%;
+      text-align: center;
+    }
+    .info {
+      display: flex;
+      .name {
+        display: inline-block;
+      }
+      .year {
+        display: inline-block;
+
+      }
     }
   }
 }
