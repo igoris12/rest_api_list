@@ -35,3 +35,27 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .RepositoriesList {
+    .header {
+      .name {
+        display: none;
+      }
+      .year {
+        display: none;
+      }
+      .stars {
+        width: 20%;
+        text-align: right;
+      }
+      .rank {
+        width: 20%;
+      }
+      .title {
+        width: 60%;
+        text-align: center;
+      }
+    }
+  }
+}
