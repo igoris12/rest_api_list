@@ -2,7 +2,6 @@ import React from "react";
 import { FaRegStar } from "react-icons/fa";
 
 function RepositoriesListItem({ repoData, rank }) {
-  console.log(repoData);
   return repoData !== undefined ? (
     <li className="RepositoriesListItem">
       <span className="rank">{rank}</span> 
