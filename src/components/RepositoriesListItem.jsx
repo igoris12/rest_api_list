@@ -12,7 +12,8 @@ function RepositoriesListItem({ repoData, rank }) {
         <FaRegStar />
         {repoData.stargazers_count}
       </span>
-      <div className="info">
+      <div className="info hidden">
+        <button>dieatals</button>
         <span className="name">Author: {repoData.owner.login}</span>
         <span className="year">Year: {repoData.created_at.slice(0, 4)}</span>
       </div>
